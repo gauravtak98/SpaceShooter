@@ -28,8 +28,8 @@ jobs:
           sudo apt-get install -y \
             git zip unzip \
             autoconf automake libtool libtool-bin \
-            pkg-config zlib1g-dev libncurses5-dev \
-            libncursesw5-dev libtinfo6 \
+            pkg-config zlib1g-dev \
+            libncurses5-dev libncursesw5-dev libtinfo6 \
             cmake libffi-dev libssl-dev \
             gettext autopoint rustc cargo
 
@@ -40,13 +40,10 @@ jobs:
           pip install setuptools
           pip install "cython==0.29.34"
 
-      - name: Accept Android SDK license
+      - name: Verify project
         run: |
-          mkdir -p ~/.buildozer/android/platform
-          touch ~/.buildozer/android/platform/.license_accepted
-
-      - name: Verify files
-        run: |
+          python --version
+          buildozer --version
           ls -la
           test -f main.py
           test -f buildozer.spec
