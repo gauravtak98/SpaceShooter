@@ -11,6 +11,8 @@ version = 1.0
 
 requirements = python3,kivy
 
+android.python_version = 3.12
+
 orientation = landscape
 fullscreen = 1
 
