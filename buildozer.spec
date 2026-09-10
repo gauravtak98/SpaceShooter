@@ -10,6 +10,8 @@ source.include_exts = py,png,jpg,jpeg,mp3
 version = 1.0
 
 requirements = python3,kivy
+p4a.branch = master
+p4a.bootstrap = sdl2
 
 orientation = landscape
 fullscreen = 1
